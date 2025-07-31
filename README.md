@@ -26,6 +26,14 @@ yarn install
 cd ios && pod install && cd ..
 ```
 
+**Note**: If you encounter boost checksum errors during `pod install`, try:
+```bash
+cd ios
+rm -rf Pods
+pod cache clean --all
+pod install --repo-update
+```
+
 ## Running the App
 
 ### iOS Simulator
