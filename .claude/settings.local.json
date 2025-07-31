@@ -20,7 +20,8 @@
       "Bash(bundle install:*)",
       "Bash(bundle exec pod:*)",
       "Bash(pod cache clean:*)",
-      "Bash(npm run android:*)"
+      "Bash(npm run android:*)",
+      "Bash(NO_FLIPPER=1 pod install)"
     ],
     "deny": []
   }

@@ -26,13 +26,25 @@ yarn install
 cd ios && pod install && cd ..
 ```
 
-**Note**: If you encounter boost checksum errors during `pod install`, try:
+**Note**: If you encounter boost checksum errors during `pod install`, try these solutions:
+
+**Option 1: Skip Flipper (recommended for testing)**
+```bash
+cd ios
+NO_FLIPPER=1 pod install
+```
+
+**Option 2: Clear cache and retry**
 ```bash
 cd ios
 rm -rf Pods
 pod cache clean --all
 pod install --repo-update
 ```
+
+**Option 3: Use Xcode directly**
+- Open `ios/RNPerformanceTest.xcworkspace` in Xcode
+- Build and run from Xcode
 
 ## Running the App
 
